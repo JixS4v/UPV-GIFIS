@@ -1,5 +1,5 @@
 ### Definicion
-El orden de una [[Ecuacion diferencial ordinaria]] es el mayor orden de derivacion que aparece en esta.
+El orden de una [[Ecuación Diferencial Ordinaria]] es el mayor orden de derivacion que aparece en esta.
 
 ### Ejemplos
 - $y'+y=x$ --> Orden 1

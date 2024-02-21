@@ -1,5 +1,5 @@
-### Definicion
-Una ecuacion diferencial ordinaria (EDO)  es una ecuacion de la forrma siguiente: $F(x,y,y',...,y^((n))) = 0$ 
+### Definición
+Una ecuación diferencial ordinaria (EDO)  es una ecuación de la forma siguiente: $F(x,y,y',...,y^((n))) = 0$ 
 Donde
 - $x$ es una variable independiente
 - $y=y(x)$ es la incognita

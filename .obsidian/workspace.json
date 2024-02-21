@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Metodos/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodos/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodos/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodos/EDO lineal de orden 1.md"
+                "file": "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md"
               }
             }
           }
@@ -147,11 +147,14 @@
   },
   "active": "e29a541d107a4267",
   "lastOpenFiles": [
-    "Metodos/Solucion de una EDO.md",
-    "Metodos/Ecuacion diferencial ordinaria.md",
-    "Metodos/EDO lineal de orden 1.md",
-    "Metodos/Orden de una EDO.md",
+    "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
+    "Métodos Matemáticos I/Bloque 1/Orden de una EDO.md",
+    "Métodos Matemáticos I/Bloque 1/Solución de una EDO.md",
+    "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
+    "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO",
+    "Métodos Matemáticos I/Bloque 1",
+    "Ecuacion diferencial ordinaria.md",
     "Metodos/Bibliografia.md",
-    "Metodos"
+    "Métodos Matemáticos I"
   ]
 }
