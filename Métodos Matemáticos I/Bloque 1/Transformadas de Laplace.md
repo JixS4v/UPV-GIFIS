@@ -1,6 +1,6 @@
 ## Funciones de tipo exponencial
 $f : [0, +oo;[ -> RR$ (o $f: RR->RR$ pero $f(x)=0$ si $x<0$)
-Se dice que f es de tipo exponencial si existen constantes $c>0$ y $a in RR$ tales que $|f(x)| <= Ce^(ax)$ para cada $x >=0$
+Se dice que $f$ es de tipo exponencial si existen constantes $c>0$ y $a in RR$ tales que $|f(x)| <= Ce^(ax)$ para cada $x >=0$
 
 ### Ejemplos
 1. Las constantes son de tipo exponencial $f(x)=D, AA x>=0 => |f(x)|=|D| <= |D| e^(ax), AAx>=0$   si $a>0$. Tomamos $C=|D|$
@@ -62,7 +62,7 @@ $= s/(s^2+a^2)a/s=a/(s^2+a^2)$
 $=>L[sin(at)]=a/(s^2+a^2)$ 
 ### Otras formas de calcular
 $L[sin(at)] " y " L[cos(at)]$ 
-(usando numeros complejos)
+(usando números complejos)
 De las formulas de Euler
 $e^(iat) = cos(at) + isin(at)$ 
 $|e^(iat)|=1, AA t$ 
@@ -76,4 +76,16 @@ $=(s+ia)/(s-ia)$
 
 Como $L[e^(iat)] = L[cos(at)] +iL[sin(at)]$ 
 $=s/(s^2+a^2) + i a/(s^2 + a^2)$
-$$=> {(L[cos(at)]=s/(s^2+a^2), L[sin(at)]=a/(s^2+a^2))}$$  
+$=> {(L[cos(at)]=s/(s^2+a^2), L[sin(at)]=a/(s^2+a^2))}$  
+### Propiedades
+Sea $f:[0,+oo[->RR$ continua a trozos de tipo exponencial.
+1. $L[e^(ct)f(t)](s)=L[f](s-c)$
+2. Si $f$ es derivable y $f'$ es continua a trozos y de tipo exponencial, $L[f'](s)=sL[f](s)-f(0)$. 
+	- Si $f''$ existe, es continua a trozos y también de tipo exponencial, $L[f''](s) = s^2 L[f](s)-s f(0)-f'(0)$ 
+3. Supongamos que $phi(t)$ es una primitiva de $f(t)$ tal que $phi(0)=0$, por ejemplo $phi(t)=int_0^tf(u)du => phi'(t)=f(t), phi(0)=0$ , $L[phi(t)]=L[int_0^tf(u)du]=1/sL[f]$ 
+4. $d/(ds) L[f]=-L[tf(t)]$. En general, $d^n/(ds^n)(L[f])=(-1)^nL[t^nf(t)]$ 
+5. Convolucion: Sea $g:[0,+oo[->RR$ continua a trozos y de tipo exponencial. Se define la convolucion de $f$ y $g$ como $(f ** g)(t)=int_(-oo)^(+oo)f(t-u)g(u)du$ 
+	- $(f**g)(t)=(g**f)(t)=int_(-oo)^(+oo)g(t-u)f(u)du$ 
+	- Si ademas $f$ y $g$ son cero en $]-oo,0[$ $(f**g)(t)=int_0^tf(t-u)g(u)du$, ya que $g(u)=0$ si $u<0$, $f(t-u)=0$ si $t-u<0 iff t<u$
+	- Ademas, $f**g$ es continua y ademas de tipo exponencial y se cumple $L[f**g]=L[f]*L[g]$ 
+6. La transformada de Laplace es inyectiva $L[f]=L[g]ifff=g$ 
