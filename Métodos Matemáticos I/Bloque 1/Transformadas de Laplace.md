@@ -23,7 +23,7 @@ Si acotamos el integrando, $|e^(-st)f(t)| = e^(-st) |f(t)| <= Ce^(at)e(-st)=Ce^(
 Supongamos que $s>a$: 
 $=> lim_(N->+oo)c/(a-s)(e^((a-s)N)-1) = c/(s-a)$
 => La integral $int_0^(+oo) e^(-st)f(t)dt$ converge absolutamente (y por lo tanto converge) si $s>a$ $L[f]: ] a, +oo [  -> RR$ 
-
+	
 ### Ejemplos
 1. $f(x) = P(x)$: $|P(x)| <= Ce^(ax), x>=0$ para ciertas $C>0, a>0$ (pero $a>0$ puede tomarse tan pequeña como queramos).$=> L[P](s)$ Esta bien definida si $s>a$, pero $a>0$ es cualquiera $=>L[P](s) " bien definida si " s>0$
 2. $f(x)=e^(bx) => a=b$,  $L [e^(bx)] (s) " bien definida si " s>b$
@@ -94,3 +94,6 @@ Sea $f:[0,+oo[->RR$ continua a trozos de tipo exponencial.
 
 Demostraciones de algunas de las propiedades: 
 1. $L[e^(ct)f(t)](s)=int_0^(+oo)e^(-st)e^(ct)f(t)dt$ $=int_0^(+oo)e^(-(s-c)t)f(t)dt$ $=L[f](s-c)$  
+3. $phi(t)=int_0^tf(u)du$ Como $phi'(t)=f(t)$, $Lubrace([phi'])_f(s)=s L[phi]-ubrace(phi(0))_=0$$=>L[phi]=L[f]/s$$=>L[int_0^tf(u)du](s)=(L[f](s))/s$ 
+4.  $f$ es de tipo exponencial => $tf(t)$ tambien es de tipo exponencial => $L[tf(t)](s)$ existe. Ademas si derivamos $L[f](s)$ respecto de $s$ aparece $L[tf(t)]$ $d/(ds)L[f]=d/(ds)(int_0^(+oo)e^(-st) f(t)dt)$ $=int_0^(+oo)d/(ds)(e^(-st)f(t))dt$ $int_0^(+oo)-te^(-st)f(t)dt$ $=-int_0^(+oo)e^(-st)tf(t)dt$ $=-L[tf(t)](s)$ 
+	- Para el caso general se gasta la misma idea $d^n/(ds^n)(L[f](s))=(-1)^nL[t^nf(t)](s)$ 
