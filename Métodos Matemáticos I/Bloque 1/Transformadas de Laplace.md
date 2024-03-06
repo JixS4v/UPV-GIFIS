@@ -9,15 +9,15 @@ Se dice que $f$ es de tipo exponencial si existen constantes $c>0$ y $a in RR$ t
 4. $f(x) = e^(bx)$ obviamente es de tipo exponencial: $$|e^(bx)| = e^bx, a = b $$ 
 Podemos suponer ademas que es continua a trozos en $[0, +oo[$ 
 ### Ejemplo
-$$ f(x) = {(1, " si " 0<=x<=1), (x^2-1, " si " x>=1)}$$
+$f(x) = {(1, " si " 0<=x<=1), (x^2-1, " si " x>=1)}$
 es continua a trozos
 
-Requeremos funciones $f:[0,+oo[ -> RR$ de tipo exponencial yy continuas a trozos.
+Requerimos funciones $f:[0,+oo[ -> RR$ de tipo exponencial y continuas a trozos.
 
 ## Transformada de Laplace
 $f: [0, +oo[->RR$ como antes. se define la transformada de Laplace de $f$ en un punto $s in RR$ como $L[f](s)=int_0^(oo)e^(-st)f(t)dt$ 
 La integral es *impropia* y se entiende como $lim_(N->+oo) int_0^Ne^(-st)f(t)dt$ 
-Supongamos que f es continua a trozos y $|f(x)| <= Ce^(ax)$ para ciertas constantes $C>0, a in RR$ y todo $x>=0$ 
+Supongamos que $f$ es continua a trozos y $|f(x)| <= Ce^(ax)$ para ciertas constantes $C>0, a in RR$ y todo $x>=0$ 
 Como $f$ es continua a trozos, las integrales $int_0^N e^(-st)f(t)dt$ existen $AA N>=0$ (o $N in NN$, es decir $N=1,2,...$ )
 Si acotamos el integrando, $|e^(-st)f(t)| = e^(-st) |f(t)| <= Ce^(at)e(-st)=Ce^((a-s)t) => int_0^N |e^(-st)f(t)|dt <= C int_0^Ne^((a-s)t)dt = [C(e^(a-s)t)/(a-s)]_(t=0)^(t=N) = C/(a-s)(e^((a-s)N) -1)$
 Supongamos que $s>a$: $$ => lim_(N->+oo)c/(a-s)(e^((a-s)N)-1) = c/(s-a)$$
@@ -89,3 +89,7 @@ Sea $f:[0,+oo[->RR$ continua a trozos de tipo exponencial.
 	- Si ademas $f$ y $g$ son cero en $]-oo,0[$ $(f**g)(t)=int_0^tf(t-u)g(u)du$, ya que $g(u)=0$ si $u<0$, $f(t-u)=0$ si $t-u<0 iff t<u$
 	- Ademas, $f**g$ es continua y ademas de tipo exponencial y se cumple $L[f**g]=L[f]*L[g]$ 
 6. La transformada de Laplace es inyectiva $L[f]=L[g]ifff=g$ 
+	- Ejemplo generico: $F(s)$ sabemos que es la transformada de Laplace de alguna funcion => es funcion, digamos $f(t)$ es unica: $L[f](s)=F(s)$ => $ubrace(L^(-1)[F(t)](t)=f(t))_"Antitransformada de Laplace"$ 
+
+Demostraciones de algunas de las propiedades: 
+1. $L[e^(ct)f(t)](s)=int_0^(+oo)e^(-st)e^(ct)f(t)dt$ $=int_0^(+oo)e^(-(s-c)t)f(t)dt$ $=L[f](s-c)$ 
