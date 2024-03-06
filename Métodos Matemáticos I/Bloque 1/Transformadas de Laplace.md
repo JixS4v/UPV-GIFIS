@@ -20,12 +20,13 @@ La integral es *impropia* y se entiende como $lim_(N->+oo) int_0^Ne^(-st)f(t)dt$
 Supongamos que $f$ es continua a trozos y $|f(x)| <= Ce^(ax)$ para ciertas constantes $C>0, a in RR$ y todo $x>=0$ 
 Como $f$ es continua a trozos, las integrales $int_0^N e^(-st)f(t)dt$ existen $AA N>=0$ (o $N in NN$, es decir $N=1,2,...$ )
 Si acotamos el integrando, $|e^(-st)f(t)| = e^(-st) |f(t)| <= Ce^(at)e(-st)=Ce^((a-s)t) => int_0^N |e^(-st)f(t)|dt <= C int_0^Ne^((a-s)t)dt = [C(e^(a-s)t)/(a-s)]_(t=0)^(t=N) = C/(a-s)(e^((a-s)N) -1)$
-Supongamos que $s>a$: $$ => lim_(N->+oo)c/(a-s)(e^((a-s)N)-1) = c/(s-a)$$
+Supongamos que $s>a$: 
+$=> lim_(N->+oo)c/(a-s)(e^((a-s)N)-1) = c/(s-a)$
 => La integral $int_0^(+oo) e^(-st)f(t)dt$ converge absolutamente (y por lo tanto converge) si $s>a$ $L[f]: ] a, +oo [  -> RR$ 
 
 ### Ejemplos
-1. $f(x) = P(x)$: $$ |P(x)| <= Ce^(ax), x>=0$$ para ciertas $C>0, a>0$ (pero $a>0$ puede tomarse tan pequenya como queramos).$$ => L[P](s)$$ Esta bien definida si $s>a$, pero $a>0$ es cualquiera $$=>L[P](s) " bien definida si " s>0$$
-2. $f(x)=e^(bx) => a=b$ $$ L [e^(bx)] (s) " bien definida si " s>b$$
+1. $f(x) = P(x)$: $|P(x)| <= Ce^(ax), x>=0$ para ciertas $C>0, a>0$ (pero $a>0$ puede tomarse tan pequeña como queramos).$=> L[P](s)$ Esta bien definida si $s>a$, pero $a>0$ es cualquiera $=>L[P](s) " bien definida si " s>0$
+2. $f(x)=e^(bx) => a=b$,  $L [e^(bx)] (s) " bien definida si " s>b$
 Ejemplo concreto: $f(t)=e^(-t), L[e^(-t)](s)$ definida si $s< -1$ 
 
 ### Propiedad
@@ -92,4 +93,4 @@ Sea $f:[0,+oo[->RR$ continua a trozos de tipo exponencial.
 	- Ejemplo generico: $F(s)$ sabemos que es la transformada de Laplace de alguna funcion => es funcion, digamos $f(t)$ es unica: $L[f](s)=F(s)$ => $ubrace(L^(-1)[F(t)](t)=f(t))_"Antitransformada de Laplace"$ 
 
 Demostraciones de algunas de las propiedades: 
-1. $L[e^(ct)f(t)](s)=int_0^(+oo)e^(-st)e^(ct)f(t)dt$ $=int_0^(+oo)e^(-(s-c)t)f(t)dt$ $=L[f](s-c)$ 
+1. $L[e^(ct)f(t)](s)=int_0^(+oo)e^(-st)e^(ct)f(t)dt$ $=int_0^(+oo)e^(-(s-c)t)f(t)dt$ $=L[f](s-c)$  
