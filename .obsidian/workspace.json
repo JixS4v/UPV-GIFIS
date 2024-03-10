@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
+                "file": "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md"
+                "file": "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md"
               }
             }
           }
@@ -145,18 +145,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "699a81008474c03b",
+  "active": "e29a541d107a4267",
   "lastOpenFiles": [
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO Exactas.md",
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO de variables separadas y separables.md",
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO de Bernouilli.md",
-    "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO",
-    "Metodos",
-    "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO de Bernouilli.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO de variables separadas y separables.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO Exactas.md",
     "Métodos Matemáticos I/Bloque 1/Orden de una EDO.md",
+    "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
     "Métodos Matemáticos I/Bloque 1/Solución de una EDO.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO lineal de orden 1.md",
+    "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
+    "Métodos Matemáticos I/Tipos de EDO",
+    "Metodos",
     "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO",
     "Métodos Matemáticos I/Bloque 1",
     "Ecuacion diferencial ordinaria.md",
