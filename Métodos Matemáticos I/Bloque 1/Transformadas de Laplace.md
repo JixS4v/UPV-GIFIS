@@ -5,8 +5,12 @@ Se dice que $f$ es de tipo exponencial si existen constantes $c>0$ y $a in RR$ t
 ### Ejemplos
 1. Las constantes son de tipo exponencial $f(x)=D, AA x>=0 => |f(x)|=|D| <= |D| e^(ax), AAx>=0$   si $a>0$. Tomamos $C=|D|$
 2. Si $f(x)=P(x)$, un polinomio $lim_(x->+oo)P(x)/(e^(ax))=0$ si $a>0$ => existe $c>0$ tal que $|P(x)| <=Ce^(ax), AAx>=0$, $P(x)$ es de tipo exponencial
-3. $sin(x), cos(x).$ $$ |sin(x)| <=1, AAx $$ $$|cos(x)| <=1, AAx$$ $$ => |sin(x)| <= 1 <= e^(ax), AAx$$ si a >0. $sin(x), cos(x)$ son tambien de tipo exponencial
-4. $f(x) = e^(bx)$ obviamente es de tipo exponencial: $$|e^(bx)| = e^bx, a = b $$ 
+3. $sin(x), cos(x).$ 
+	- $|sin(x)| <=1, AAx$ 
+	- $|cos(x)| <=1, AAx$ 
+	- $=> |sin(x)| <= 1 <= e^(ax), AAx$
+	- si a >0. $sin(x), cos(x)$ son también de tipo exponencial
+1. $f(x) = e^(bx)$ obviamente es de tipo exponencial: $$|e^(bx)| = e^bx, a = b $$ 
 Podemos suponer ademas que es continua a trozos en $[0, +oo[$ 
 ### Ejemplo
 $f(x) = {(1, " si " 0<=x<=1), (x^2-1, " si " x>=1)}$
@@ -107,3 +111,4 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 - **Ejemplo**: $ccL^(-1)[(s+2)/(s(s^2+2s+2))]$
 	- $(s+2)/(s^2(s^2+2s+2)^2)$
 	- $A/s+(B_s+C)/(s^2+2s+20)+D/(s^2)$
+	- $A=1,B=-1,C=1$ 

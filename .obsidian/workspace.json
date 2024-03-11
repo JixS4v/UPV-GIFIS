@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a491363077332936",
+        "id": "e4faa158ea16ab25",
         "type": "tabs",
         "children": [
           {
-            "id": "e29a541d107a4267",
+            "id": "f53731b55178bd09",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,7 +49,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -145,10 +145,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e29a541d107a4267",
+  "active": "f53731b55178bd09",
   "lastOpenFiles": [
-    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
     "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
+    "README.md",
+    "Métodos Matemáticos I/Bloque 1/Tipos de EDO/EDO lineal de orden 1.md",
     "Métodos Matemáticos I/Bloque 1/Orden de una EDO.md",
     "Métodos Matemáticos I/Bloque 1/Solución de una EDO.md",
     "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
