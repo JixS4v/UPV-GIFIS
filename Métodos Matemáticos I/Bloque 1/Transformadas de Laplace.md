@@ -26,7 +26,7 @@ Como $f$ es continua a trozos, las integrales $int_0^N e^(-st)f(t)dt$ existen $A
 Si acotamos el integrando, $|e^(-st)f(t)| = e^(-st) |f(t)| <= Ce^(at)e(-st)=Ce^((a-s)t) => int_0^N |e^(-st)f(t)|dt <= C int_0^Ne^((a-s)t)dt = [C(e^(a-s)t)/(a-s)]_(t=0)^(t=N) = C/(a-s)(e^((a-s)N) -1)$
 Supongamos que $s>a$: 
 $=> lim_(N->+oo)c/(a-s)(e^((a-s)N)-1) = c/(s-a)$
-=> La integral $int_0^(+oo) e^(-st)f(t)dt$ converge absolutamente (y por lo tanto converge) si $s>a$ $ccL[f]: ] a, +oo [  -> RR$ 
+$=>$ La integral $int_0^(+oo) e^(-st)f(t)dt$ converge absolutamente (y por lo tanto converge) si $s>a$ $ccL[f]: ] a, +oo [  -> RR$ 
 
 ### Ejemplos
 1. $f(x) = P(x)$: $|P(x)| <= Ce^(ax), x>=0$ para ciertas $C>0, a>0$ (pero $a>0$ puede tomarse tan pequeña como queramos).$=>  ccL[P](s)$ Esta bien definida si $s>a$, pero $a>0$ es cualquiera $=> ccL[P](s) " bien definida si " s>0$
@@ -107,7 +107,7 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 - **Ejemplo**: $ccL^(-1)[(s-1)/(s^2-3)]$ 
 	- $ccL[cosat]=s/(s^2+a^2)$ => $ccL^(-1)[s/(s^2+3)]=cossqrt3t$
 	- $ccL[sinat]=a/(s^2+a^2)$ => $1/(sqrt3) ccL^(-1)[(sqrt3)/(s^2+(sqrt3)^2)]=1/(sqrt3)sinsqrt3t$ 
-	- => $ccL^(-1)[(s-1)/(s^2+30)]=cossqrt3t-1/(sqrt3)sinsqrt3t$ 
+	- $=>ccL^(-1)[(s-1)/(s^2+30)]=cossqrt3t-1/(sqrt3)sinsqrt3t$ 
 - **Ejemplo**: $ccL^(-1)[(s+2)/(s(s^2+2s+2))]$
 	- $(s+2)/(s^2(s^2+2s+2)^2)$
 	- $A/s+(B_s+C)/(s^2+2s+20)+D/(s^2)$
