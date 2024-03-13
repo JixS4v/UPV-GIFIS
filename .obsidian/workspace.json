@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e4faa158ea16ab25",
+        "id": "7894c75347e16ca7",
         "type": "tabs",
         "children": [
           {
-            "id": "f53731b55178bd09",
+            "id": "3563cf4447c5628d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -145,23 +145,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "699a81008474c03b",
+  "active": "3563cf4447c5628d",
   "lastOpenFiles": [
-    "README.md",
-    "Métodos Matemáticos I/Tipos de EDO/EDO de Bernouilli.md",
-    "Métodos Matemáticos I/Tipos de EDO/EDO de variables separadas y separables.md",
     "Métodos Matemáticos I/Tipos de EDO/EDO Exactas.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO de variables separadas y separables.md",
+    "Métodos Matemáticos I/Tipos de EDO/EDO de Bernouilli.md",
     "Métodos Matemáticos I/Bloque 1/Orden de una EDO.md",
-    "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
     "Métodos Matemáticos I/Bloque 1/Solución de una EDO.md",
+    "Métodos Matemáticos I/Bloque 1/Ecuación Diferencial Ordinaria.md",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
+    "Métodos Matemáticos I/Transformadas de Laplace 1.md",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.tex",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.synctex(busy)",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.log",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.fls",
+    "Métodos Matemáticos I/Bloque 1/pdflatex5652.fls",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.fdb_latexmk",
+    "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.aux",
+    "Calculo II/Jacobiana.md",
+    "Calculo II",
+    "README.md",
     "Métodos Matemáticos I/Tipos de EDO/EDO lineal de orden 1.md",
     "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO/Solución de una EDO lineal de orden 1.md",
     "Métodos Matemáticos I/Tipos de EDO",
     "Metodos",
-    "Métodos Matemáticos I/Bloque 1/Métodos de solución de EDO",
-    "Métodos Matemáticos I/Bloque 1",
     "Ecuacion diferencial ordinaria.md",
-    "Metodos/Bibliografia.md",
-    "Métodos Matemáticos I"
+    "Metodos/Bibliografia.md"
   ]
 }

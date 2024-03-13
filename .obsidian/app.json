@@ -5,5 +5,9 @@
     "landscape": false,
     "margin": "2",
     "downscalePercent": 100
-  }
+  },
+  "showLineNumber": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "tabSize": 2
 }
