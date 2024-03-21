@@ -123,7 +123,28 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 ${y'+y=3e^(2t);y(0)=0:}$  
 Tomamos la transformada de Laplace: $bary=ccL[y]$
 $ccL[y']+ccL[y]=ccL[3e^(2t)]$
-Como $ccL[f'](s)=sccL[f]-f(0)$, $s ccL[y]-y(0)+ccL[y]=3ccL[e^(2t)] = 3/(s-2)$
+Como $ccL[f'](s)=s ccL[f]-f(0)$, $s ccL[y]-y(0)+ccL[y]=3ccL[e^(2t)] = 3/(s-2)$
+Usamos $bary=ccL[y]$; $sbary-underbrace(y(0))_("0 "->" C.I.")+bary(s)=3/(s-2)$ 
+$=>bary(s)=3/((s+1)(s-2))$ ;  $y(t)=ccL^(-1)[3/((s+1)(s-2))]$ 
+Descomponemos en fracciones simples
+	$3/((s+1)(s-2))=A/(s+1)+B/(s-2)$ , $A,B$ por determinar
+	$3/((s+1)(s-2))=(A(s-2)+B(s+1))/((s+1)(s-2))$
+	$iffA(s-2)+B(s+1)=3iff(A+B)s-2A+B=3$
+	$=>{A+B=0, => B=-A;-2A+B=3,=>-3A=3:}=>{A=-1;B=1:}$
+	$=>y(s)=-1/(s+1)+1/(s-2)$
+	Es una descomposición única ya que son monomios linealmente independientes que solo tienen una solución.
+$=>y(t)=ccL^(-1)[bary(s)](t)=ccL^(-1)[-1/(s+1)](t)+L^(-1)[1/(s-2)](t)=-e^t+e^(2t)$
+#### Ejemplo
+${y''-4y'+4y=0;y(0)=0", "y'(0)=3:}$
+Tomamos la transformada de Laplace:
+	$ccL[y'']-4ccL[y]+4ccL[y]=0;$
+	$ccL[y'']=s^2bary-sy(0)-y'(0);$
+	$ccL[y']=s bary-y(0)$
+	Con $bary=ccL[y]$
+$=>s^2bary-sy(0)-y'(0)-4(sbary-y(0))+4bary=s^2bary-3-4sbary+4bary=0$
+$=>(s^2+4s+4)bary=3=>bary=3/(s^2-4s+4)$
+$bary=3/((s-2)^2)$ 
+$y=ccL^(-1)[3/((s-2)^2)](t)$ 
 
 # Clase del 13/03/2024
 
