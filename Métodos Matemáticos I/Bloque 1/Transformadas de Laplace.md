@@ -112,8 +112,6 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 	- $(s+2)/(s^2(s^2+2s+2)^2)$
 	- $A/s+(B_s+C)/(s^2+2s+20)+D/(s^2)$
 	- $A=1,B=-1,C=1$ 
-
-# TODO: Contenido de la clase del 12/03/2024
 ### Resolución del PVI con Transformada de Laplace
 #### Idea
 1. Tomamos transformada de Laplace en la EDO en $y(t)$
@@ -145,6 +143,34 @@ $=>s^2bary-sy(0)-y'(0)-4(sbary-y(0))+4bary=s^2bary-3-4sbary+4bary=0$
 $=>(s^2+4s+4)bary=3=>bary=3/(s^2-4s+4)$
 $bary=3/((s-2)^2)$ 
 $y=ccL^(-1)[3/((s-2)^2)](t)$ 
+Como $ccL[t]=1/(s^2)$ , y $ccL[e^ctf(t)]=ccL[f](s-c)$
+
+#### Ejemplo
+${y''+2y'+2y=2;y(0)=0", "y'(0)=1:}$ 
+Tomamos transformada de Laplace ($bary=ccL[y]$):
+	$s^2bary-sy(0)-y'(0)+2(sbary-y(0))+2bary=s^2bary-1+2sbary+2bary=2/s$
+	$=>(s^2-2s+2)bary=2/s+1=(2+s)/s=>bary=(2+s)/(s(s^2-2s+2))$
+$s^2+2s+2=0$ no tiene raíces reales, completamos cuadrados:
+	$s^2+2s+1+1=(s+1)^2+1$
+$bary=(2+s)/(s((s+1)^2+1))$
+Descomponemos en fracciones simples:
+	$(2+s)/(s((s+1)^2+1))=A/s+(Bs+C)/((s+1)^2+1)$ 
+	$=(A((s+1)^2+1)+(Bs+C)s)/(s((s+1)^2+1)$
+	$=>s+2=A((s+1)^2+1)+Bs^2+Cs$
+	${A+B=0;2A+C=1;2A=2:}=>{A=1;B=-1;C=-1:}$ 
+	$bary(s)=1/s-(s+1)/((s+1)^2+1)$ 
+	$(ccL[cost]=s/(s^2+1);ccL[e^(-t)cost]=(s+1)/((s+1)^2+1);ccL[1]=1/s)$ 
+	$=>y(t)=1-e^tcost$ 
+#### Ejemplo
+Calcula la transformada de Laplace de $F(t)={5,"si "0<t<3;0,"si "t>3:}$ 
+Aplicando la definición de la transformada de Laplace:
+	$ccL[F](s)=int_0^ooe^(-st)F(t)dt$
+	$=int_0^3e^(-st)F(t)dt+int_3^ooe^(-st)F(t)dt$
+	$=5int_0^3e^(-st)dt=[-5/3e^(-st)]^(t=3)_(t=0)=-5/3(1-e^(-3s))$ 
+$L[F](s)=-5/3(1-e^(-3s))$ 
+#### Problema 2 (PoliformaT)
+Ya sabemos que si $f$ es de tipo exponencial, $tf(t)$ también es de tipo exponencial, además $ccL[t^nf(t)](s)=(-1)^n(d^n)/(ds^n)ccL[f](s)$ 
+$ccL[tcost]=d/(ds)ccL[cost]=-d/(ds)(s/(s^2+1))=-(s^2+1-2s^2)/((s^2+1)^2)=(s^2-1)/((s^2+1)^2)$ 
 
 # Clase del 13/03/2024
 

@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9445a1cd12bfd8c9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -145,7 +156,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3563cf4447c5628d",
+  "active": "9445a1cd12bfd8c9",
   "lastOpenFiles": [
     "Física II/Cienfuegos/Campo Magnético.md",
     "Métodos Matemáticos I/Bloque 1/Transformadas de Laplace.md",
