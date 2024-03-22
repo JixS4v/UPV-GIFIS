@@ -120,20 +120,23 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 #### Ejemplo
 ${y'+y=3e^(2t);y(0)=0:}$  
 Tomamos la transformada de Laplace: $bary=ccL[y]$
-$ccL[y']+ccL[y]=ccL[3e^(2t)]$
-Como $ccL[f'](s)=s ccL[f]-f(0)$, $s ccL[y]-y(0)+ccL[y]=3ccL[e^(2t)] = 3/(s-2)$
-Usamos $bary=ccL[y]$; $sbary-underbrace(y(0))_("0 "->" C.I.")+bary(s)=3/(s-2)$ 
+	$ccL[y']+ccL[y]=ccL[3e^(2t)]$
+	Como $ccL[f'](s)=s ccL[f]-f(0)$, $s ccL[y]-y(0)+ccL[y]=3ccL[e^(2t)] = 3/(s-2)$
+	Usamos $bary=ccL[y]$; $sbary-underbrace(y(0))_("0 "->" C.I.")+bary(s)=3/(s-2)$ 
 $=>bary(s)=3/((s+1)(s-2))$ ;  $y(t)=ccL^(-1)[3/((s+1)(s-2))]$ 
 Descomponemos en fracciones simples
 	$3/((s+1)(s-2))=A/(s+1)+B/(s-2)$ , $A,B$ por determinar
 	$3/((s+1)(s-2))=(A(s-2)+B(s+1))/((s+1)(s-2))$
 	$iffA(s-2)+B(s+1)=3iff(A+B)s-2A+B=3$
 	$=>{A+B=0, => B=-A;-2A+B=3,=>-3A=3:}=>{A=-1;B=1:}$
-	$=>y(s)=-1/(s+1)+1/(s-2)$
+	$=>bary(s)=-1/(s+1)+1/(s-2)$
 	Es una descomposición única ya que son monomios linealmente independientes que solo tienen una solución.
-$=>y(t)=ccL^(-1)[bary(s)](t)=ccL^(-1)[-1/(s+1)](t)+L^(-1)[1/(s-2)](t)=-e^t+e^(2t)$
+Tomamos la transformada inversa
+	$=>y(t)=ccL^(-1)[bary(s)](t)=ccL^(-1)[-1/(s+1)](t)+L^(-1)[1/(s-2)](t)=-e^t+e^(2t)$
 #### Ejemplo
+
 ${y''-4y'+4y=0;y(0)=0", "y'(0)=3:}$
+
 Tomamos la transformada de Laplace:
 	$ccL[y'']-4ccL[y]+4ccL[y]=0;$
 	$ccL[y'']=s^2bary-sy(0)-y'(0);$
@@ -146,7 +149,9 @@ $y=ccL^(-1)[3/((s-2)^2)](t)$
 Como $ccL[t]=1/(s^2)$ , y $ccL[e^ctf(t)]=ccL[f](s-c)$
 
 #### Ejemplo
+
 ${y''+2y'+2y=2;y(0)=0", "y'(0)=1:}$ 
+
 Tomamos transformada de Laplace ($bary=ccL[y]$):
 	$s^2bary-sy(0)-y'(0)+2(sbary-y(0))+2bary=s^2bary-1+2sbary+2bary=2/s$
 	$=>(s^2-2s+2)bary=2/s+1=(2+s)/s=>bary=(2+s)/(s(s^2-2s+2))$
@@ -171,7 +176,31 @@ $L[F](s)=-5/3(1-e^(-3s))$
 #### Problema 2 (PoliformaT)
 Ya sabemos que si $f$ es de tipo exponencial, $tf(t)$ también es de tipo exponencial, además $ccL[t^nf(t)](s)=(-1)^n(d^n)/(ds^n)ccL[f](s)$ 
 $ccL[tcost]=d/(ds)ccL[cost]=-d/(ds)(s/(s^2+1))=-(s^2+1-2s^2)/((s^2+1)^2)=(s^2-1)/((s^2+1)^2)$ 
+$ccL[t^2sint]=(d^2)/(ds^2)(1/(s^2+1))=d/(ds)(-(2s)/((s^2+1)^2))=(-2(s^2+1)^2-2s(2s)2(s^2+2))/((s^2+1)^4)=(6s^4+4s^2-2)/((s^2+1)^4)$
+#### Propiedad
+Si $(f(t))/t$ es de tipo exponencial, $f(t)$ también será de tipo exponencial $=>ccL[(f(t))/t](s)=int_s^ooccL[f](u)du$ . ($**$)
+Para demostrarlo, usamos primero otra propiedad.
+##### Propiedad
+Si $f$ es de tipo exponencial, entonces $lim_(s->+oo)ccL[f](s)=0$
+##### Demonstración
+Supongamos que $|f(t)|<=ce^(at)$ para ciertas contstantes $c>0, a in RR$, y $AAt>=0$ $|ccL[f](s)|=|int_0^ooe^(-st)|f(t)|dt<=c int_0^ooe^(-st)e^atdt=c int_0^ooe^(-(s-a)t)dt$ 
+Si $s>a$, la integral anterior converge (y además $ccL[f](s)$ está bien definida)
+Pero $int_0^ooe^(-(s-a)t)dt=[-(e^(-(s-a)t))/(s-a)]^(t=oo)_(t=0)=1/(s-a)$
+Por tanto, $|ccL[f](s)|<=c/(s-a), s>a " si " s->oo$
+$=>lim_(s->+oo)ccL[f](s)=0$ 
 
+Volviendo a ($**$), definimos $g(t)=(f(t))/t=>f(t)=tg(t)$,
+Tomamos transformada de Laplace:
+	$ccL[f]=ccL[tg(t)]=-d/(ds)ccL[g]$
+	$=>int_s^(+oo)ccL[f](u)du=int_s^ood/(ds)ccL[g](u)du$
+	$=[ccL[g](u)]_(u=s)^(u=+oo)$
+	$=ubrace(-lim_(u->+oo)ccL[g](u))_(underset("Por Propiedad anterior")(0))+ccL[g](s)$
+Hemos probado ($**$) ya que $g(t)=(f(t))/t$ 
+#### Aplicación
+Cálculo de integrales. Queremos calcular integrales del tipo $int_0^ooe^(-at)f(t)dt$. Esto recuerda a $ccL[f](s)$ en $s=a$.
+##### Ejemplo
+$int_0^ooe^(-3t)cos2tdt$ Calculamos primero $ccL[cos2t](s)=s/(s^2+2^2)=>int_0^ooe^(-3t)cos(2t)dt=ccL[cos2t](3)=3/(9+4)=3/13$
+$
 # Clase del 13/03/2024
 
 $f(t)=1/t -> ccL[1/t]$ **NO EXISTE**
@@ -215,9 +244,9 @@ $ccL[(t-7)^2e^(3(t-7))H(t-7)](s)=e^(-7s)ccL[t^2e^(3t)]$
 $=e^(-7s)ccL[t^2](s-3)=e^(-7s)2/((s-3)^3)$
 $L[sintH(t-3)]$
 
->$sin(t)=sin((t-3)+3)=sin(t-3)cos3+cos(t-3)sin(3)$
->$sin(alpha+-beta)=sinalphacosbeta+-sinbetacosalpha$ 
->$cos(alpha +-beta)=cosalphacosbeta -+sinalphasinbeta$
+	$sin(t)=sin((t-3)+3)=sin(t-3)cos3+cos(t-3)sin(3)$
+	$sin(alpha+-beta)=sinalphacosbeta+-sinbetacosalpha$ 
+	$cos(alpha +-beta)=cosalphacosbeta -+sinalphasinbeta$
 
 $ccL[sintH(t-3)]=cos3ccL[sin(t-3)H(t-3)] + sin3ccL[cos(t-3)H(t-3)]$
 $=cos3e^(-3s)ccL[sint]+sin3e^(-3s)ccL[cost]$ 
