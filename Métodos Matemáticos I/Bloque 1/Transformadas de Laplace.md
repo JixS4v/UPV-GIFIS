@@ -89,7 +89,7 @@ Sea $f:[0,+oo[->RR$ continua a trozos de tipo exponencial.
 	- Si $f''$ existe, es continua a trozos y también de tipo exponencial, $ccL[f''](s) = s^2  ccL[f](s)-s f(0)-f'(0)$ 
 3. Supongamos que $phi(t)$ es una primitiva de $f(t)$ tal que $phi(0)=0$, por ejemplo $phi(t)=int_0^tf(u)du => phi'(t)=f(t), phi(0)=0$ , $ccL[phi(t)]= ccL[int_0^tf(u)du]=1/s  ccL[f]$ 
 4. $d/(ds)  ccL[f]=- ccL[tf(t)]$. En general, $d^n/(ds^n)( ccL[f])=(-1)^n ccL[t^nf(t)]$ 
-5. Convolucion: Sea $g:[0,+oo[->RR$ continua a trozos y de tipo exponencial. Se define la convolucion de $f$ y $g$ como $(f ** g)(t)=int_(-oo)^(+oo)f(t-u)g(u)du$ 
+5. Convolución: Sea $g:[0,+oo[->RR$ continua a trozos y de tipo exponencial. Se define la convolución de $f$ y $g$ como $(f ** g)(t)=int_(-oo)^(+oo)f(t-u)g(u)du$ 
 	- $(f**g)(t)=(g**f)(t)=int_(-oo)^(+oo)g(t-u)f(u)du$ 
 	- Si ademas $f$ y $g$ son cero en $]-oo,0[$ $(f**g)(t)=int_0^tf(t-u)g(u)du$, ya que $g(u)=0$ si $u<0$, $f(t-u)=0$ si $t-u<0 iff t<u$
 	- Ademas, $f**g$ es continua y ademas de tipo exponencial y se cumple $ccL[f**g]= ccL[f]* ccL[g]$ 
@@ -244,9 +244,9 @@ $ccL[(t-7)^2e^(3(t-7))H(t-7)](s)=e^(-7s)ccL[t^2e^(3t)]$
 $=e^(-7s)ccL[t^2](s-3)=e^(-7s)2/((s-3)^3)$
 $L[sintH(t-3)]$
 
-	$sin(t)=sin((t-3)+3)=sin(t-3)cos3+cos(t-3)sin(3)$
-	$sin(alpha+-beta)=sinalphacosbeta+-sinbetacosalpha$ 
-	$cos(alpha +-beta)=cosalphacosbeta -+sinalphasinbeta$
+>$sin(t)=sin((t-3)+3)=sin(t-3)cos3+cos(t-3)sin(3)$
+>$sin(alpha+-beta)=sinalphacosbeta+-sinbetacosalpha$ 
+>$cos(alpha +-beta)=cosalphacosbeta -+sinalphasinbeta$
 
 $ccL[sintH(t-3)]=cos3ccL[sin(t-3)H(t-3)] + sin3ccL[cos(t-3)H(t-3)]$
 $=cos3e^(-3s)ccL[sint]+sin3e^(-3s)ccL[cost]$ 
