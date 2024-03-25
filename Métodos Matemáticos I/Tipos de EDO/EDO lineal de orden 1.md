@@ -1,4 +1,4 @@
-		Son de forma $y'+a(x)y=b(x)$ tal que $a,b:I->RR$ continuas en $I sube RR$, $a$ y $b$ son concidas
+Son de forma $y'+a(x)y=b(x)$ tal que $a,b:I->RR$ continuas en $I sube RR$, $a$ y $b$ son concidas
 
 ### Metodo de solucion
 $y'+a(x)y=b(x)$
