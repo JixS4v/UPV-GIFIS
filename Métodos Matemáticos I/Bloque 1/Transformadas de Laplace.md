@@ -116,7 +116,7 @@ Sea $P/Q(t)$ un cociente de polinomios ($P$,$Q$ polinomios), es decir, una funci
 #### Idea
 1. Tomamos transformada de Laplace en la EDO en $y(t)$
 2. Despejamos $ccL[y]=(P(s))/(Q(s))$ función racional
-3. Tomamos la transformadad inversa $y(t)=ccL^(-1)[P/Q](t)$ (descomponemos en fracciones simples y luego "identificamos" la inversa en cada sumando)
+3. Tomamos la transformada inversa $y(t)=ccL^(-1)[P/Q](t)$ (descomponemos en fracciones simples y luego "identificamos" la inversa en cada sumando)
 #### Ejemplo
 ${y'+y=3e^(2t);y(0)=0:}$  
 Tomamos la transformada de Laplace: $bary=ccL[y]$
