@@ -200,16 +200,14 @@ Hemos probado ($**$) ya que $g(t)=(f(t))/t$
 Cálculo de integrales. Queremos calcular integrales del tipo $int_0^ooe^(-at)f(t)dt$. Esto recuerda a $ccL[f](s)$ en $s=a$.
 ##### Ejemplo
 $int_0^ooe^(-3t)cos2tdt$ Calculamos primero $ccL[cos2t](s)=s/(s^2+2^2)=>int_0^ooe^(-3t)cos(2t)dt=ccL[cos2t](3)=3/(9+4)=3/13$
-$
-# Clase del 13/03/2024
-
+##### Ejemplo
 $f(t)=1/t -> ccL[1/t]$ **NO EXISTE**
 $ccL[1/t](s)=int_0^oo 1/te^(-st)dt$  
 $=ubrace(int_0^1 1/t e^(-st)dt)_"no converge"+ubrace(int_1^(+oo)1/te^(-st)dt)_"converge"$ 
 $ccL[(e^(-t)-e^(-3t))/t] != underbrace(ccL[(e^(-t))/t]-ccL[e^(-3t)/t])_("No existen")$ 
 Si existe $ubrace(ccL[t^(-1/2)]=int_0^1t^(-1/2)e^(-st)dt+int_1^oot^(-1/2)e^(-st)dt)_"Convergen"$ 
-3 
-a) $int_0^oo e^(-st) (sint)/tdt = "?"$
+#### Problema 3 (PoliformaT)
+a. $int_0^oo e^(-st) (sint)/tdt = "?"$
 **Opción 1:** $ccL[e^(-t)(sint)/t](0)$
 **Opción 2**: $ccL[(sint)/t](1)$
 $ccL[(sint)/t](s)=int_s^ooL[sint](u)du$ 
@@ -219,7 +217,7 @@ $tan(pi/2-5) = (sin(pi/2-s))/(cos(pi/2=s))=(coss)/(sins)=1/(tans)$
 Basta tomar tan a los lados
 $=>ccL[e^(-t)(sint)/t](s)=ccL[(sint)/t](s+1)=arctan(1/(s+1))$
 $=>int_0^ooe^(-t)(sint)/tdt={ccL[(sint)/t](1)=arctan1=pi/4;overset("o")(=)ccL[e^(-t)(sint)/t](0)=arctan(1/(s+1))|_(s=0)=pi/4:}$ 
-c) $ccL[int_0^t(sinu)/udu](s)=(ccL[(sint)/t](s))/s$ 
+c. $ccL[int_0^t(sinu)/udu](s)=(ccL[(sint)/t](s))/s$ 
 $=1/sarctan(1/s)$ 
 ### Función de Heaviside
 $H(t)={1, "si " t>0 ; 0, "si " t<0:}$ 
@@ -349,15 +347,17 @@ Bajo las condiciones adecuadas sobre la función $f:[0,+oo[->RR$ se cumple $lim_
 ### Propiedad
 Supongamos que $f$ es de tipo exponencial: $|f(t)|<=Ce^(at)$ para ciertas $C>0, ainRR$ y todo $t>=0$. Si $s,s_0>a$, entonces $lim _(s->s_0)ccL[f](s)=ccL[f](s_0)$. Es decir, $ccL[f]$ es continua en $s_0$. Si $s_0$ es arbitrario, entonces es continua en $]a,+oo[$ 
 #### Demostración
-$|ccL[f](s)-ccL[f](s_0)|$ veamos que tiende a 0 si $s->s_0$. 
+$|ccL[f](s)-ccL[f](s_0)|$ 
+veamos que tiende a 0 si $s->s_0$. 
 $=|int_0^ooe^(-st)f(t)dt-int_0^ooe^(-s_0t)f(t)dt|$
 $=|int_0^oo(e^(-st)-e^(-s_0t))f(t)dt|$
 $<=int_0^oo |e^(-st)-e^(-s_0t)|cdot|f(t)|dt$ 
 $<=Cint_0^oo|e^(-st)-e^(-sot)|e^(-at)$
 $=Cint_0^oo|e^(-(s-a)t)-e^(-(s-a)t)|dt$
-##### Caso 1 ($s>s_0$)
-$-(s-a)<-(s_0-a)$
-# TODO: COPIAR DE PIZARRA GRABACIÓN
+##### Caso 1 ($s>s_0$) 
+($s>s_0) ->-(s-a)<=(s_0-a)$
+$=Cint_0^ooe^(-(s_0-a)t)-e^(-(s-a)t)dt=C[-(e^(-(s_0-a)t))/(s_0-a)+(e^(-(s-a)t))/(s-a)]_0^oo$
+$=C1/(s_0-a)-C1/(s-a)=C(s-s_0)/((s_0-a)(s-a))->(C cdot 0)/((s_0-a)^2)=-$  
 ##### Caso 2 ($s<s_0$): es cambiar $s$ por $s_0$
 $|ccL[f](s)-ccL[f](s_0)|<=C(s_0-s)/((s_0-a)(s-a))$
 $=>|ccL[f](s)-ccL[f](s_0)|<=C|s-s_0|/((s_0-a)(s-a))$
@@ -373,3 +373,34 @@ $=>lim_(s->0^+)(s ccL[f](s)-f(0))$
 $=lim_(t->+oo)f(t)-f(0)$
 $=>lim_(s->0^+) s ccL[f](s)=lim_(t->+oo)f(t)$
 $Ci(t)=int_t^(+oo)(cosu)/udu$
+$C_i(0)$ no está bien definida ($int_0^1(du)/u$ no converge)
+$ccL[G(t)=(sint)/t]$
+$tG(t)=sint$
+$ccL[tG(t)]=-d/(ds)ccL[G(t)]$
+$=>ccL[sint]=1/(1+s^2)=>ccL[G(t)]=arctans+c => -pi/2+C => C=pi/2$
+$=>ccL[G]=pi/2-arctans=arctan(1/2)$
+**Se cumple** $int_t^oo(cosu)/udu = -gamma -lnt + int_0^t(1-cosu)/udu$
+$gamma$ es la constante de Euler.
+$gamma=-int_0^ooe^(-u)lnudu$
+$ccL[ln(t)]=int_0^ooe^(-st)lntdt$
+$|ln|<=c/(sqrtt)$ cerca de 0
+$=[u=st,t=u/s;dt=(du)/(ds)]$
+$=int_0^ooe^(-u)lnu/sdu$
+$=int_0^ooe^(-u)(lnu-lns)du$
+$=ubrace(1/s int_0^ooe^(-u)lnudu)_(-gamma/s)-(lns)/s int_0^ooe^(-u)du$
+$=-gamma/s+(lns)/s e^(-u)|^(u=+oo)_(u=0)$
+$ccL[-gamma]=-gamma/3$
+$ccL[int_0^t(1-cosu)/udu]=1/s ccL[(1-cost)/t]$
+$=1/s int_s^ooccL[1-cost](u)du$
+$=1/s int_s^oo(1/u-u/(u^2+1))dt$
+$=1/s[lnu/(sqrt(u^2+1))]_(u=s)^(u=+oo)$ 
+$=-1/sln(s/(sqrt(s^2+1)))$
+$=>ccL[C_i(t)](s)=ccL[int_t^oo(cosu)/udu]$
+$=-gamma/s+gamma/s+(lns)/s-1/s(lns-1/2ln(s^2+1))$
+$=(ln(s^2+1))/(2s)$
+##### Ejercicio
+$ccL[Ie(t)](s)=?$
+$Ie(t)=int_t^oo(e^(-u))/udu$
+$Ie(0)$ no está bien definida
+**Se cumple**: $int_t^oo(e^(-u))/udu=-gamma-lnt+int^t_0(1-e^u)/udu$
+$=>ccL[Ie(t)](s)=(ln(s+1))/s$
