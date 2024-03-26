@@ -9,4 +9,4 @@ Una solución de una [[Ecuación Diferencial Ordinaria]] es una función $phi : 
 		- $phi''+phi=4/3cosx-2sinx+2sinx-1/3cos2x = cos2x$
 
 ### Métodos de solución
-[[Solución de una EDO lineal de orden 1]]
+[[Solución de una EDO lineal de orden ]]

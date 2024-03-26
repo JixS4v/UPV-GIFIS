@@ -4,7 +4,7 @@ Se dice que $f$ es de tipo exponencial si existen constantes $c>0$ y $a in RR$ t
 
 ### Ejemplos
 1. Las constantes son de tipo exponencial $f(x)=D, AA x>=0 => |f(x)|=|D| <= |D| e^(ax), AAx>=0$   si $a>0$. Tomamos $C=|D|$
-2. Si $f(x)=P(x)$, un polinomio $lim_(x->+oo)P(x)/(e^(ax))=0$ si $a>0$ => existe $c>0$ tal que $|P(x)| <=Ce^(ax), AAx>=0$, $P(x)$ es de tipo exponencial
+2. Si $f(x)=P(x)$, un polinomio $lim_(x->+oo)P(x)/(e^(ax))=0$ si $a>0=>EEc>0$ tal que $|P(x)| <=Ce^(ax), AAx>=0$, $P(x)$ es de tipo exponencial
 3. $sin(x), cos(x).$ 
 	- $|sin(x)| <=1, AAx$ 
 	- $|cos(x)| <=1, AAx$ 
@@ -301,7 +301,6 @@ $ccL^(-1)[(C_0s+C_1+2C_0)/((s+1)^2+2^2)]=C_0e^(-t)cos2t+(C_0+C_1)/2e^(-t)sin2t$
 $=>y(t)=1/2int_0^tf(t-u)e^(-u)sin(2u)du + C_0e^(-t)cos2t+(C_0+C_1)/2e^(-t)sin2t$ 
 Podemos llegar a una solución general de nuestra EDO:
 $y(t)=Ae^(-t)cos2t+Be^(-t)sin2+int_0^tf(t-u)e^(-u)sin(u) du$
-
 ### Ejemplo
 ${x=2x-3y;y'=y-2x:}, x(0)=8,y(0)=3$
 Definimos las transformadas de $x,y$ y sus derivadas
@@ -325,3 +324,52 @@ $(3s-22)/((s+1)(s-4))=A/(s+1)+B/(s-4)=(A(s-4)+B(s+1))/((s+1)(s-4))$
 $=>{A+B=3;-4A+B=-22:}->{A=5;B=-2:}$
 $bary=5/(s+1)-2/(s-4)$
 $=>{x(t)=ccL^(-1)[5/(s+1)+3/(s-4)]=5e^(-t)+3e^(4t); y(t)=ccL^(-1)[5/(s+1)-2/(s-4)]=5e^(-t)-2e^(4t):}$ 
+## Teoremas Límite
+### Teorema del Valor Inicial
+Bajo las condiciones adecuadas sobre $f: [0,+oo[->R$ se cumple:$lim_(t->0^+)f(t)=lim_(s->+oo)s ccL[f(s)]$
+#### Demostración
+- Supongamos que $f$ es de tipo exponencial (entonces $f'$ es también de tipo exponencial)
+- Como $f'$ es de tipo exponencial, sabemos que $ccL[f'](s)->0$ si $s->+oo$ (lo vimos)
+- Usamos ahora que $ccL[f']=s ccL[f]-f(0)$ 
+- Si tomamos límite cuando $s->+oo$: $0=lim_(s->+oo)ccL[f'](s)=lim_(s->+oo)[s ccL[f](s)-f(0)]$ 
+- Supongamos que $f$ es continua en $t=0$
+	- $=>lim_(t->0^+)f(t)=f(0)$
+- $=>lim_(t->0^+)f(t)=f(0)=lim_(s->+oo)s ccL[f](s)$
+- si $f$ no fuera continua en $t=0$, basta tomar $lim_(t->0^+)f(t)$ en vez de $f(0)$
+#### Aplicación (Problema 3b PoliformaT)
+$ccL[(sint)/t]=?$
+$G(t)=(sint)/t iff tG(t)=sint$
+$=>ccL[tG(t)]=ccL[sint]$
+${ccL[tG(t)]=-d/(ds)ccL[G];ccL[sint]=s^2/(s+1):}$
+$=>d/(ds)ccL[G(t)]=1/(s^2+1)$
+Integramos:
+$ccL[G(t)]=int1/(s^2+1)=-arctans+C$
+## Teorema del Valor Final
+Bajo las condiciones adecuadas sobre la función $f:[0,+oo[->RR$ se cumple $lim_(t->+oo)f(t)=lim_(s->0^+)ccL[f](s)$ 
+### Propiedad
+Supongamos que $f$ es de tipo exponencial: $|f(t)|<=Ce^(at)$ para ciertas $C>0, ainRR$ y todo $t>=0$. Si $s,s_0>a$, entonces $lim _(s->s_0)ccL[f](s)=ccL[f](s_0)$. Es decir, $ccL[f]$ es continua en $s_0$. Si $s_0$ es arbitrario, entonces es continua en $]a,+oo[$ 
+#### Demostración
+$|ccL[f](s)-ccL[f](s_0)|$ veamos que tiende a 0 si $s->s_0$. 
+$=|int_0^ooe^(-st)f(t)dt-int_0^ooe^(-s_0t)f(t)dt|$
+$=|int_0^oo(e^(-st)-e^(-s_0t))f(t)dt|$
+$<=int_0^oo |e^(-st)-e^(-s_0t)|cdot|f(t)|dt$ 
+$<=Cint_0^oo|e^(-st)-e^(-sot)|e^(-at)$
+$=Cint_0^oo|e^(-(s-a)t)-e^(-(s-a)t)|dt$
+##### Caso 1 ($s>s_0$)
+$-(s-a)<-(s_0-a)$
+# TODO: COPIAR DE PIZARRA GRABACIÓN
+##### Caso 2 ($s<s_0$): es cambiar $s$ por $s_0$
+$|ccL[f](s)-ccL[f](s_0)|<=C(s_0-s)/((s_0-a)(s-a))$
+$=>|ccL[f](s)-ccL[f](s_0)|<=C|s-s_0|/((s_0-a)(s-a))$
+##### Consecuencia
+Si $a<0$, podemos tomar $s, s_0>=0$, en particular podemos tomar $s_0=0$,
+$=>lim_(s->0)ccL[f](s)underset(s_0=0)(=)ccL[f](0)=int_0^oof(t)dt$ 
+Veamos el teorema del Valor Final:
+¿$lim_(t->+oo)f(t)=lim_(s->0^+)s ccL[f[(s)$ ?
+Supongamos que $f'$ es de tipo exponencial $|f'(t)|<=Ce^(at)$, con $a<0$
+$ccL[f'](s)=s ccL[f](s)-f(0) underset("si " s->0^+)(->)ccL[f'](0)=int_0^oof'(t)dt=[f(t)]_(t=0)^(t=oo)$
+$=lim_(t->+oo)f(t)-f(0)$
+$=>lim_(s->0^+)(s ccL[f](s)-f(0))$
+$=lim_(t->+oo)f(t)-f(0)$
+$=>lim_(s->0^+) s ccL[f](s)=lim_(t->+oo)f(t)$
+$Ci(t)=int_t^(+oo)(cosu)/udu$
