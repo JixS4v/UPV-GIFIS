@@ -334,14 +334,6 @@ Bajo las condiciones adecuadas sobre $f: [0,+oo[->R$ se cumple:$lim_(t->0^+)f(t)
 	- $=>lim_(t->0^+)f(t)=f(0)$
 - $=>lim_(t->0^+)f(t)=f(0)=lim_(s->+oo)s ccL[f](s)$
 - si $f$ no fuera continua en $t=0$, basta tomar $lim_(t->0^+)f(t)$ en vez de $f(0)$
-#### Aplicación (Problema 3b PoliformaT)
-$ccL[(sint)/t]=?$
-$G(t)=(sint)/t iff tG(t)=sint$
-$=>ccL[tG(t)]=ccL[sint]$
-${ccL[tG(t)]=-d/(ds)ccL[G];ccL[sint]=s^2/(s+1):}$
-$=>d/(ds)ccL[G(t)]=1/(s^2+1)$
-Integramos:
-$ccL[G(t)]=int1/(s^2+1)=-arctans+C$
 ## Teorema del Valor Final
 Bajo las condiciones adecuadas sobre la función $f:[0,+oo[->RR$ se cumple $lim_(t->+oo)f(t)=lim_(s->0^+)ccL[f](s)$ 
 ### Propiedad
@@ -351,7 +343,7 @@ $|ccL[f](s)-ccL[f](s_0)|$
 veamos que tiende a 0 si $s->s_0$. 
 $=|int_0^ooe^(-st)f(t)dt-int_0^ooe^(-s_0t)f(t)dt|$
 $=|int_0^oo(e^(-st)-e^(-s_0t))f(t)dt|$
-$<=int_0^oo |e^(-st)-e^(-s_0t)|cdot|f(t)|dt$ 
+	$<=int_0^oo |e^(-st)-e^(-s_0t)|cdot|f(t)|dt$ 
 $<=Cint_0^oo|e^(-st)-e^(-sot)|e^(-at)$
 $=Cint_0^oo|e^(-(s-a)t)-e^(-(s-a)t)|dt$
 ##### Caso 1 ($s>s_0$) 
@@ -361,6 +353,26 @@ $=C1/(s_0-a)-C1/(s-a)=C(s-s_0)/((s_0-a)(s-a))->(C cdot 0)/((s_0-a)^2)=-$
 ##### Caso 2 ($s<s_0$): es cambiar $s$ por $s_0$
 $|ccL[f](s)-ccL[f](s_0)|<=C(s_0-s)/((s_0-a)(s-a))$
 $=>|ccL[f](s)-ccL[f](s_0)|<=C|s-s_0|/((s_0-a)(s-a))$
+### Aplicación de los Teoremas del Valor Inicial y Valor Final
+$ccL[int_0^t(sinu)/u" d"u]=?$
+$G(t)=int_0^t=(sinu)/u" d"u=>G'(t)=(sint)/t$
+$=>tG'(t)=sint$
+$=>ubrace(ccL[tG'(t)])_(-d/(ds)ccL[G'(t)])=ccL[sint]$
+Integramos: $ccL[G'(t)]=-arctans+C$
+$=>s ccL[G]-G(0)=-arctans+C$
+Pero $G(0)=0=>s ccL[G]=-arctans+C$
+Por el teorema del Valor Inicial, sabemos que: $lim_(t->0+)G(t)=lim_(s->+oo) s ccL[G]$
+Aplicándolo a nuestro caso: 
+$lim_(s->+oo)(-arctans+C)=G(0)=0$
+$=>-pi/2+C=0$
+$=>C=pi/2$
+$=>s ccL[G]=pi/2-arctans=arctan1/s$
+$=>ccL[G]=1/sarctan1/s$
+Ahora, el Teorema del Valor Final dice:
+$lim_(t->+oo)G(t)=lim_(s->0^+)s ccL[G]$
+$lim_(t->+oo)G(t)=lim_(t->+oo)int_0^t(sinu)/u" d"u=int_0^(+oo)(sinu)/u" d"u$
+$lim_(s->0^+)s ccL[G]=lim_(s->0^+)arctan1/s=pi/2$
+$=>int_0^+oo (sinx)/xdx=pi/2$
 ##### Consecuencia
 Si $a<0$, podemos tomar $s, s_0>=0$, en particular podemos tomar $s_0=0$,
 $=>lim_(s->0)ccL[f](s)underset(s_0=0)(=)ccL[f](0)=int_0^oof(t)dt$ 
@@ -404,26 +416,7 @@ $Ie(t)=int_t^oo(e^(-u))/udu$
 $Ie(0)$ no está bien definida
 **Se cumple**: $int_t^oo(e^(-u))/udu=-gamma-lnt+int^t_0(1-e^u)/udu$
 $=>ccL[Ie(t)](s)=(ln(s+1))/s$
-### Aplicación de los Teoremas del Valor Inicial y Valor Final
-$ccL[int_0^t(sinu)/u" d"u]=?$
-$G(t)=int_0^t=(sinu)/u" d"u=>G'(t)=(sint)/t$
-$=>tG'(t)=sint$
-$=>ubrace(ccL[tG'(t)])_(-d/(ds)ccL[G'(t)])=ccL[sint]$
-Integramos: $ccL[G'(t)]=-arctans+C$
-$=>s ccL[G]-G(0)=-arctans+C$
-Pero $G(0)=0=>s ccL[G]=-arctans+C$
-Por el teorema del Valor Inicial, sabemos que: $lim_(t->0+)G(t)=lim_(s->+oo) s ccL[G]$
-Aplicándolo a nuestro caso: 
-$lim_(s->+oo)(-arctans+C)=G(0)=0$
-$=>-pi/2+C=0$
-$=>C=pi/2$
-$=>s ccL[G]=pi/2-arctans=arctan1/s$
-$=>ccL[G]=1/sarctan1/s$
-Ahora, el Teorema del Valor Final dice:
-$lim_(t->+oo)G(t)=lim_(s->0^+)s ccL[G]$
-$lim_(t->+oo)G(t)=lim_(t->+oo)int_0^t(sinu)/u" d"u=int_0^(+oo)(sinu)/u" d"u$
-$lim_(s->0^+)s ccL[G]=lim_(s->0^+)arctan1/s=pi/2$
-$=>int_0^+oo (sinx)/xdx=pi/2$
+
 #### Ejercicios
 a. $ccL[(1-cost)/(t^2)]=int_s^ooccL[(1-cost)/t](u)du$
 $=int_s^ooint_u^ooccL[1-cost](v)" d"v" d"u$ 
