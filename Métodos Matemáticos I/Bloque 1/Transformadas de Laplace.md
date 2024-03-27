@@ -404,3 +404,37 @@ $Ie(t)=int_t^oo(e^(-u))/udu$
 $Ie(0)$ no está bien definida
 **Se cumple**: $int_t^oo(e^(-u))/udu=-gamma-lnt+int^t_0(1-e^u)/udu$
 $=>ccL[Ie(t)](s)=(ln(s+1))/s$
+### Aplicación de los Teoremas del Valor Inicial y Valor Final
+$ccL[int_0^t(sinu)/u" d"u]=?$
+$G(t)=int_0^t=(sinu)/u" d"u=>G'(t)=(sint)/t$
+$=>tG'(t)=sint$
+$=>ubrace(ccL[tG'(t)])_(-d/(ds)ccL[G'(t)])=ccL[sint]$
+Integramos: $ccL[G'(t)]=-arctans+C$
+$=>s ccL[G]-G(0)=-arctans+C$
+Pero $G(0)=0=>s ccL[G]=-arctans+C$
+Por el teorema del Valor Inicial, sabemos que: $lim_(t->0+)G(t)=lim_(s->+oo) s ccL[G]$
+Aplicándolo a nuestro caso: 
+$lim_(s->+oo)(-arctans+C)=G(0)=0$
+$=>-pi/2+C=0$
+$=>C=pi/2$
+$=>s ccL[G]=pi/2-arctans=arctan1/s$
+$=>ccL[G]=1/sarctan1/s$
+Ahora, el Teorema del Valor Final dice:
+$lim_(t->+oo)G(t)=lim_(s->0^+)s ccL[G]$
+$lim_(t->+oo)G(t)=lim_(t->+oo)int_0^t(sinu)/u" d"u=int_0^(+oo)(sinu)/u" d"u$
+$lim_(s->0^+)s ccL[G]=lim_(s->0^+)arctan1/s=pi/2$
+$=>int_0^+oo (sinx)/xdx=pi/2$
+#### Ejercicios
+a. $ccL[(1-cost)/(t^2)]=int_s^ooccL[(1-cost)/t](u)du$
+$=int_s^ooint_u^ooccL[1-cost](v)" d"v" d"u$ 
+$=int_s^ooint_u^oo 1/v - v/(v^2+1) " d"v " d"u$
+$=int_s^oo 1/2ln(u^2+1)-lnu " d"u$
+El procedimiento de esta integral se deja como un ejercicio para el lector
+$ccL[(1-cost)/(t^2)]=[1/2 u ln(u^2+1)-2u ln u+arctanu]_s^(+oo)$
+$=[u/2(ln(u^2+1)-2lnu)+arctanu]_s^oo$
+$=[u/2 ln(u^2+1)/(u^2)+arctanu]^oo_s$
+$lim_(u->+oo)u/2ln(u^2+1)/(u^2)+arctanu=lim_(u->+oo)u/2ln(1+u^2)+arctanu$
+$=lim_(u->+oo)(u^2)/(2u)ln(1+1/(u^2))+arctanu=1/(2u) ln(1+1/(u^2))^(u^2)+arctanu$
+$=lim_(u->+oo)1/(2u)lne+arctanu=0+pi/2$
+$ccL[(1-cost)/(t^2)]=pi/2 - arctans + s/2 ln((s^2)/(s^2+1))=arctan(1/s)-s/2ln(s^2+1)/(s^2)$
+$int_0^oo(1-cost)/(t^2)dt=lim_(s->0^+)ccL[(1-cost)/(t^2)](s)=pi/2$
