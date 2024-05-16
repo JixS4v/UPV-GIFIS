@@ -10,7 +10,7 @@ Basta probar que si $phi_1, phi_2$ con linealmente dependientes (existe $kinRR, 
 $y''+ay'+by=f(x) {a", "b " constantes" ; f(x) " continua en un intervalo " SFS {phi_1(x),phi_2(x)}:}$
 1. Buscamos la solución general de la EDO homogénea
 	Para una ecuación que presenta esta forma, la solución general de la EDO homogénea $y_h''+ay_h'+by_h=0$ es dada por $y_h=C_1phi_1(x)+C_2phi_2(x)$ 
-	Para encontrar $phi_1$ y $phi_2$, resolvemos la ecuación característica, dada por $r^2+ar+b=0$. A partir de las soluciones ${r_1,r_2}$ de la ecuación, calculamos ${phi_1, phi_2}$ como ${phi_1=e^(r_1);phi_2=e^(r_2):}$
+	Para encontrar $phi_1$ y $phi_2$, resolvemos la ecuación característica, dada por $r^2+ar+b=0$. A partir de las soluciones ${r_1,r_2}$ de la ecuación, calculamos ${phi_1, phi_2}$ como ${phi_1=e^(r_1x);phi_2=e^(r_2x):}$
 2. Buscamos una solución particular de la EDO completa
 	Buscamos ahora una solución particular de la EDO completa ($**$), de la forma $y_p=v_1(x)phi_1(x)+v_2(x)phi_2(x)$
 	Las funciones $v_1'$ y $v_2'$ deben cumplir el sistema ${phi_1v_1'+phi_2v_2'=0;phi_1'(x)v_1'+phi_2'(x)v_2'=f(x):}$
@@ -40,7 +40,7 @@ $y''-4y'+3y=2e^x$
 		- $v_2=inte^(-2x)dx=-1/2e^(-2x)$
 	- $y_p=v_1phi_1+v_2phi_2=-xe^x-1/2e^(-x)e^(3x)=-e^x-(e^x)/2$
 	- $y=y_h+y_p=C_1e^x+C_2e^(3x)-e^x(x+1/2)$
-### Observación teórica
+	### Observación teórica
 Por qué un sistema? 
 Supongamos que se cumple:
 $(S){phi_1v_1'+phi_2v_2'=0;phi_1'v_1'+phi_2'v_2'=0:}$
@@ -61,4 +61,22 @@ $y''+ay'+by=f(x)$, con $f(x)$ producto de polinomios, exponenciales y senos o co
 Buscamos una solución particular de la forma siguiente:
 $y_p=e^(alphax)(tildePk(x)cosbetax+tildeQ_k(x)sinbetax)x^s$
 con $k=max(m,n)$
-$s$ es la multiplicidad de $alpha+-ibeta$ como raíz del polinomio característico.
+$s$ es la multiplicidad (número de veces que es raíz) de $alpha+-ibeta$ como raíz del polinomio característico.
+Pasan diferentes cosas, dependiendo de los valores de $alpha$ y $beta$
+- Caso $alpha=beta=0$
+	- $f(x)=P_A(x)=A_0+A_1x+...+A_nx^n$
+	- $y_p=tildeP_n(x)x^2=(tildeA_0+tildeA_1x+...+tildeA_nx^n)x^s$
+	- $s$ es la multiplicidad de $r=0$ $(alpha+-ibeta)$ como raíz del polinomio característico
+- Caso $alpha!=0;beta=0$
+	- $y''+ay'+by=f(x)$
+	- $f(x)=e^(alphax)=>P_n(x)=e^(alphax)(A_0+A_1x+...+A_nx^n)$
+	- $=>y_p=e^(alphax)tildeP_n(x)$ ($P_n(x)$ es otro polinomio del mismo grado)
+- Caso $alpha=0;beta!=0$
+	- $y''+ay'+by=P_n(x)cosbetax+Q_m(x)sinbetax$
+	- Se busca $y_p=x^2[tildeP_k(x)cosbetax+tildeQ_k(x)sinbetax], k=max(n,m)$
+	- $s$ es la multiplicidad de $+-betai$ como raíz del polinomio característico $(s<=1)$
+- Caso general $alpha!=0;beta!=0$
+	- $y''+ay'+by=e^(alphax)(P_n(x)cosbetax+Q_m(x)sinbetax)$
+	- $y_p=x^s e^(alphax)(tildeP_k(x)cosbetax+tildeQ_k(x)sinbetax)$
+Una vez conocemos la forma de la solución, asignamos variables a cada uno de los coeficientes y despejamos para obtener una solución particular.
+### Ejemplo

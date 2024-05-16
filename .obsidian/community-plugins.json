@@ -1,4 +1,6 @@
 [
   "obsidian-asciimath",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "inline-math",
+  "chem"
 ]
